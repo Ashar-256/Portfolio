@@ -1,5 +1,7 @@
 {
-  "name": "my-portfolio",
+  
+  "homepage": "https://Ashar-256.github.io/Portfolio",
+  "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,6 +42,4 @@
       "last 1 safari version"
     ]
   }
-  "homepage": "https://Ashar-256.github.io/Portfolio",
-  "name": "portfolio",
 }
