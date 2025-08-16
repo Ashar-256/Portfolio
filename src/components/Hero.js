@@ -9,7 +9,7 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
-    const words = ['Front End Developer', 'Open to Oportunities', 'Code Enthusiast'];
+    const words = ['Front End Developer', 'Open to Opportunities', 'Code Enthusiast'];
     const fullText = words[loopNum % words.length];
     
     const handleType = () => {
