@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.9c83b1ee.css",
-    "main.js": "/Portfolio/static/js/main.cf6704b9.js",
+    "main.js": "/Portfolio/static/js/main.c706db95.js",
     "static/media/Dating-Webpage.png": "/Portfolio/static/media/Dating-Webpage.4faaec477673067e60db.png",
     "static/media/Portolio.png": "/Portfolio/static/media/Portolio.bc9cde2b298dcf31fef1.png",
     "static/media/Drum-Kit.png": "/Portfolio/static/media/Drum-Kit.f2d8bbef3d33d5522eec.png",
     "index.html": "/Portfolio/index.html",
     "main.9c83b1ee.css.map": "/Portfolio/static/css/main.9c83b1ee.css.map",
-    "main.cf6704b9.js.map": "/Portfolio/static/js/main.cf6704b9.js.map"
+    "main.c706db95.js.map": "/Portfolio/static/js/main.c706db95.js.map"
   },
   "entrypoints": [
     "static/css/main.9c83b1ee.css",
-    "static/js/main.cf6704b9.js"
+    "static/js/main.c706db95.js"
   ]
 }
