@@ -6,7 +6,7 @@ const Hero = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [typingSpeed, setTypingSpeed] = useState(200);
 
   useEffect(() => {
     const words = ['Front End Developer', 'Open to Opportunities', 'Code Enthusiast'];
@@ -234,3 +234,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
