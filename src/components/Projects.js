@@ -5,7 +5,6 @@ import { SiJavascript, SiTailwindcss, SiHtml5, SiCss3 } from 'react-icons/si';
 
 // Import local images
 import DatingWebpage from '../images/projects/Dating-Webpage.png';
-import DrumKit from '../images/projects/Drum-Kit.png';
 import Portfolio from '../images/projects/Portolio.png';
 
 const Projects = () => {
@@ -24,22 +23,12 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Drum Kit',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: DrumKit,
-      technologies: ['JavaScript', 'CSS', 'HTML'],
-      github: 'https://github.com/Ashar-256/Drum-kit',
-      demo: 'https://ashar-256.github.io/Drum-kit/',
-      category: 'frontend'
-    },
-    {
-      id: 3,
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website built with React and Framer Motion, featuring smooth animations and interactive elements.',
       image: Portfolio,
       technologies: ['React', 'Framer Motion', 'CSS', 'HTML'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
+      github: 'https://github.com/Ashar-256/Portfolio',
+      demo: 'https://ashar-256.github.io/Portfolio/',
       category: 'frontend'
     },
   ];

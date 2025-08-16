@@ -6,7 +6,7 @@ const Hero = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [typingSpeed, setTypingSpeed] = useState(200);
 
   useEffect(() => {
     const words = ['Front End Developer', 'Open to Opportunities', 'Code Enthusiast'];
@@ -95,7 +95,7 @@ const Hero = () => {
             <a href="https://x.com/Ashar_256" target="_blank" rel="noopener noreferrer" className="social-link">
               <FaTwitter />
             </a>
-            <a href="mailto:itsashar256@gmail.com" className="social-link">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=itsashar256@gmail.com" target="_blank" rel="noopener noreferrer"className="social-link">
               <FaEnvelope />
             </a>
           </motion.div>
@@ -234,6 +234,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
