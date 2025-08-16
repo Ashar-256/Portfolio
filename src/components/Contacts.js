@@ -28,10 +28,10 @@ const Contacts = () => {
 
     try {
       const result = await emailjs.send(
-        'service_i78p9z9', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_i78p9z9',
+        'template_kck3pd6',
         formData,
-        'vu32HOdnvWKp9dZ-M' // Replace with your EmailJS user ID
+        'vu32HOdnvWKp9dZ-M'
       );
 
       if (result.text === 'OK') {
@@ -67,7 +67,7 @@ const Contacts = () => {
       icon: <FaMapMarkerAlt />,
       title: 'Location',
       value: 'Chennai, India',
-      link: 'https://maps.google.com/?q=San Francisco, CA',
+      link: 'https://www.google.com/maps/place/Chennai',
     },
   ];
 
