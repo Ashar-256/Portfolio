@@ -64,7 +64,3 @@ This project is ready for deployment on GitHub Pages or any static hosting servi
 ## 📧 Contact
 
 Feel free to reach out for collaborations or just to say hi!
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
