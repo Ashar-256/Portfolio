@@ -26,7 +26,31 @@ function App() {
   }, []);
 
   const dockItems = [
-    // ... dock items
+    {
+      icon: <VscHome size={24} />,
+      label: 'Home',
+      onClick: () => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }),
+    },
+    {
+      icon: <VscAccount size={24} />,
+      label: 'About',
+      onClick: () => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }),
+    },
+    {
+      icon: <VscCode size={24} />,
+      label: 'Projects',
+      onClick: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }),
+    },
+    {
+      icon: <VscTools size={24} />,
+      label: 'Skills',
+      onClick: () => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' }),
+    },
+    {
+      icon: <VscMail size={24} />,
+      label: 'Contact',
+      onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }),
+    },
   ];
 
   return (
