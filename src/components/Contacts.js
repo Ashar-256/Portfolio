@@ -92,7 +92,7 @@ const Contacts = () => {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="contact-content"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ const Contacts = () => {
           </div>
 
           <div className="contact-grid">
-            <motion.div 
+            <motion.div
               className="contact-info"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -122,7 +122,7 @@ const Contacts = () => {
 
               <div className="contact-details">
                 {contactInfo.map((info, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="contact-item"
                     initial={{ opacity: 0, x: -30 }}
@@ -160,7 +160,7 @@ const Contacts = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="contact-form"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -216,8 +216,8 @@ const Contacts = () => {
                   />
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="submit-btn"
                   disabled={isSubmitting}
                 >
@@ -225,7 +225,7 @@ const Contacts = () => {
                 </button>
 
                 {submitMessage && (
-                  <motion.div 
+                  <motion.div
                     className={`submit-message ${submitMessage.includes('error') ? 'error' : 'success'}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ const Contacts = () => {
       <style jsx>{`
         .contact {
           padding: 5rem 0;
-          background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+          /* background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); */
         }
 
         .contact-content {
@@ -280,7 +280,7 @@ const Contacts = () => {
         }
 
         .contact-info {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.6);
           padding: 2rem;
           border-radius: 1rem;
           border: 1px solid rgba(255, 255, 255, 0.1);
@@ -356,7 +356,7 @@ const Contacts = () => {
         }
 
         .contact-form {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.6);
           padding: 2rem;
           border-radius: 1rem;
           border: 1px solid rgba(255, 255, 255, 0.1);

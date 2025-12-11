@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import TiltedCard from './TiltedCard';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -9,9 +10,9 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(200);
 
   useEffect(() => {
-    const words = ['Front End Developer', 'Open to Opportunities', 'Code Enthusiast'];
+    const words = ['Front End Developer', 'Code Enthusiast', 'React Developer'];
     const fullText = words[loopNum % words.length];
-    
+
     const handleType = () => {
       if (isDeleting) {
         setText(fullText.substring(0, text.length - 1));
@@ -56,50 +57,54 @@ const Hero = () => {
   return (
     <section id="hero" className="hero">
       <div className="container">
-        <motion.div 
-          className="hero-content"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div variants={itemVariants} className="hero-text">
-            <h1 className="hero-title">
-              Hi, I'm <span className="text-gradient">Mohammad Ashar</span>
-            </h1>
-            <h2 className="hero-subtitle">
-              I'm a <span className="typing-text">{text}</span>
-              <span className="cursor">|</span>
-            </h2>
-            <p className="hero-description">
-              I create beautiful, responsive web applications.
-              Passionate about clean code, user experience, and bringing ideas to life.
-              Eager to collaborate and learn from others in a professional environment.
-            </p>
-            <motion.div variants={itemVariants} className="hero-buttons">
-              <a href="#contact" className="btn btn-primary">
-                Get In Touch
-              </a>
-              <a href="#projects" className="btn btn-secondary">
-                View My Work
-              </a>
-            </motion.div>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="hero-social">
-            <a href="https://github.com/Ashar-256" target="_blank" rel="noopener noreferrer" className="social-link">
-              <FaGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/mohammad-ashar-262an/" target="_blank" rel="noopener noreferrer" className="social-link">
-              <FaLinkedin />
-            </a>
-            <a href="https://x.com/Ashar_256" target="_blank" rel="noopener noreferrer" className="social-link">
-              <FaTwitter />
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=itsashar256@gmail.com" target="_blank" rel="noopener noreferrer"className="social-link">
-              <FaEnvelope />
-            </a>
-          </motion.div>
+        <motion.div variants={itemVariants} className="hero-text">
+          <h1 className="hero-title">
+            Hi, I'm <span className="text-gradient">Mohammad Ashar</span>
+          </h1>
         </motion.div>
+
+        <TiltedCard
+          imageSrc="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjwvc3ZnPg==" // Transparent 1x1 SVG
+          altText="Hero Background"
+          captionText=""
+          containerHeight="auto"
+          containerWidth="auto"
+          imageHeight="auto"
+          imageWidth="auto"
+          rotateAmplitude={12}
+          scaleOnHover={1.02}
+          showMobileWarning={false}
+          showTooltip={false}
+          displayOverlayContent={true}
+          overlayContent={
+            <motion.div
+              className="hero-content"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div variants={itemVariants} className="hero-text-inner">
+                <h2 className="hero-subtitle">
+                  I'm a <span className="typing-text">{text}</span>
+                  <span className="cursor">|</span>
+                </h2>
+                <p className="hero-description">
+                  I create beautiful, responsive web applications.
+                  Passionate about clean code, user experience, and bringing ideas to life.
+                  Eager to collaborate and learn from others in a professional environment.
+                </p>
+                <div className="hero-buttons">
+                  <a href="#contact" className="btn btn-primary">
+                    Get In Touch
+                  </a>
+                  <a href="#projects" className="btn btn-secondary">
+                    View My Work
+                  </a>
+                </div>
+              </motion.div>
+            </motion.div>
+          }
+        />
       </div>
 
       <style jsx>{`
@@ -107,7 +112,7 @@ const Hero = () => {
           min-height: 100vh;
           display: flex;
           align-items: center;
-          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          /* background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); */
           position: relative;
           overflow: hidden;
         }
@@ -119,8 +124,8 @@ const Hero = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+          /* background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%); */
         }
 
         .hero-content {
@@ -129,6 +134,19 @@ const Hero = () => {
           text-align: center;
           max-width: 800px;
           margin: 0 auto;
+        }
+
+        .hero-text {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .hero-text-inner {
+            /* Styles for the content INSIDE the card */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-title {
@@ -171,7 +189,7 @@ const Hero = () => {
           display: flex;
           gap: 1rem;
           justify-content: center;
-          margin-bottom: 3rem;
+          margin-bottom: 1rem;
         }
 
         .hero-social {

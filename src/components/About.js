@@ -42,7 +42,7 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="about-content"
           variants={aboutVariants}
           initial="hidden"
@@ -57,9 +57,9 @@ const About = () => {
             <motion.div variants={itemVariants} className="about-text">
               <h3>Hello, I'm a Front End Developer</h3>
               <p>
-              Aspiring frontend developer with a strong foundation in HTML, CSS, and JavaScript. 
-              Passionate about building interactive and responsive web applications. 
-              Eager to contribute and learn in a collaborative, professional environment.
+                Aspiring frontend developer with a strong foundation in HTML, CSS, and JavaScript.
+                Passionate about building interactive and responsive web applications.
+                Eager to contribute and learn in a collaborative, professional environment.
               </p>
               <p>
                 When I'm not coding, you can find me playing games, reading novels, sketching.
@@ -69,8 +69,8 @@ const About = () => {
             <motion.div variants={itemVariants} className="about-timeline">
               <h3>My Journey</h3>
               {timeline.map((item, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className="timeline-item"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -93,7 +93,7 @@ const About = () => {
       <style jsx>{`
         .about {
           padding: 5rem 0;
-          background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+          /* background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); */
         }
 
         .about-content {
@@ -153,7 +153,7 @@ const About = () => {
           gap: 1rem;
           margin-bottom: 2rem;
           padding: 1.5rem;
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.6);
           border-radius: 0.75rem;
           border-left: 3px solid #6366f1;
         }

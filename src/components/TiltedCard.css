@@ -1,0 +1,90 @@
+.tilted-card-figure {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    perspective: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile alert removed */
+
+.tilted-card-inner {
+    position: relative;
+    transform-style: preserve-3d;
+    display: grid;
+    place-items: center;
+
+    /* Visualization styles */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    /* Add padding so content isn't right on the edge */
+    transition: all 0.4s ease;
+}
+
+/* Static hover removed in favor of dynamic spotlight */
+.tilted-card-figure:hover .tilted-card-inner {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.tilted-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    will-change: transform;
+    transform: translateZ(0);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.tilted-card-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+    /* Match card radius */
+}
+
+.tilted-card-overlay {
+    position: relative;
+    /* Driven by content */
+    z-index: 2;
+    will-change: transform;
+    transform: translateZ(30px);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    grid-area: 1 / 1;
+}
+
+/* Ensure interactive elements in overlay are clickable */
+.tilted-card-overlay>* {
+    pointer-events: auto;
+}
+
+.tilted-card-caption {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 4px 10px;
+    font-size: 10px;
+    color: #2d2d2d;
+    opacity: 0;
+    z-index: 3;
+}

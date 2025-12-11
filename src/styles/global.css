@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: transparent;
+  color: #f8fafc;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -82,7 +82,7 @@ body {
   .container {
     padding: 0 1rem;
   }
-  
+
   .section {
     padding: 3rem 0;
   }

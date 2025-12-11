@@ -6,22 +6,22 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/Ashar-256',
       name: 'GitHub',
     },
     {
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/mohammad-ashar-262an',
       name: 'LinkedIn',
     },
     {
       icon: <FaTwitter />,
-      url: 'https://twitter.com/yourusername',
+      url: 'https://X.com/Ashar_256',
       name: 'Twitter',
     },
     {
       icon: <FaEnvelope />,
-      url: 'mailto:your.email@example.com',
+      url: 'mailto:itsashar256@gmail.com',
       name: 'Email',
     },
   ];
@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="footer-content"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaJava, FaPython, FaGitAlt, FaGithubAlt, FaBrain} from 'react-icons/fa';
-import { SiJavascript, SiCanva, SiCss3, SiC, SiCplusplus} from 'react-icons/si';
+import { FaReact, FaJava, FaPython, FaGitAlt, FaGithubAlt, FaBrain } from 'react-icons/fa';
+import { SiJavascript, SiCanva, SiCss3, SiC, SiCplusplus } from 'react-icons/si';
 
 const Skills = () => {
   const skillCategories = [
@@ -9,30 +9,24 @@ const Skills = () => {
       title: 'Programming Languages',
       icon: <FaReact />,
       skills: [
-        { name: 'JavaScript', level: 80, icon: <SiJavascript /> },
-        { name: 'CSS', level: 80, icon: <SiCss3 /> },
-        { name: 'Java', level: 80, icon: <FaJava /> },
-        { name: 'C', level: 80, icon: <SiC /> },
-        { name: 'C++', level: 80, icon: <SiCplusplus /> },
-        { name: 'Python', level: 40, icon: <FaPython /> },
+        { name: 'JavaScript', icon: <SiJavascript /> },
+        { name: 'CSS', icon: <SiCss3 /> },
+        { name: 'React.js', icon: <FaReact /> },
+        { name: 'Java', icon: <FaJava /> },
+        { name: 'C', icon: <SiC /> },
+        { name: 'C++', icon: <SiCplusplus /> },
+        { name: 'Python', icon: <FaPython /> },
       ]
     },
     {
       title: 'Tools & DevOps',
       icon: <FaGitAlt />,
       skills: [
-        { name: 'Git', level: 85, icon: <FaGitAlt /> },
-        { name: 'GitHub', level: 50, icon: <FaGithubAlt /> },
-        { name: 'Canva', level: 90, icon: <SiCanva />},
+        { name: 'Git', icon: <FaGitAlt /> },
+        { name: 'GitHub', icon: <FaGithubAlt /> },
+        { name: 'Canva', icon: <SiCanva /> },
       ]
     },
-    {
-      title: 'Currently Learning',
-      icon: <FaBrain />,
-      skills: [
-        { name: 'React', level: 50, icon: <FaReact /> },
-      ]
-    }
   ];
 
   const containerVariants = {
@@ -68,7 +62,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="skills-content"
           variants={containerVariants}
           initial="hidden"
@@ -84,7 +78,7 @@ const Skills = () => {
 
           <div className="skills-grid">
             {skillCategories.map((category, categoryIndex) => (
-              <motion.div 
+              <motion.div
                 key={category.title}
                 className="skill-category"
                 variants={categoryVariants}
@@ -96,25 +90,14 @@ const Skills = () => {
 
                 <div className="skills-list">
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
+                    <motion.div
                       key={skill.name}
                       className="skill-item"
                       variants={skillVariants}
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(99, 102, 241, 0.2)" }}
                     >
-                      <div className="skill-header">
-                        <div className="skill-icon">{skill.icon}</div>
-                        <span className="skill-name">{skill.name}</span>
-                      </div>
-                      <div className="skill-bar">
-                        <motion.div 
-                          className="skill-progress"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                          viewport={{ once: true }}
-                        />
-                      </div>
-                      <span className="skill-percentage">{skill.level}%</span>
+                      <div className="skill-icon">{skill.icon}</div>
+                      <span className="skill-name">{skill.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -122,13 +105,13 @@ const Skills = () => {
             ))}
           </div>
 
-          <motion.div 
+          <motion.div
             className="skills-summary"
             variants={categoryVariants}
           >
             <h3>Continuous Learning</h3>
             <p>
-              I'm always eager to learn new technologies and improve my skills. 
+              I'm always eager to learn new technologies and improve my skills.
               Currently exploring React.
             </p>
           </motion.div>
@@ -138,7 +121,7 @@ const Skills = () => {
       <style jsx>{`
         .skills {
           padding: 5rem 0;
-          background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+          /* background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); */
         }
 
         .skills-content {
@@ -176,7 +159,7 @@ const Skills = () => {
         }
 
         .skill-category {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.6);
           border-radius: 1rem;
           padding: 2rem;
           border: 1px solid rgba(255, 255, 255, 0.1);
@@ -202,54 +185,35 @@ const Skills = () => {
 
         .skills-list {
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
           gap: 1rem;
         }
 
         .skill-item {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          position: relative;
+          gap: 0.75rem;
+          background: rgba(255, 255, 255, 0.05);
+          padding: 0.75rem 1.25rem;
+          border-radius: 2rem;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          cursor: default;
+          transition: all 0.3s ease;
         }
 
-        .skill-header {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          min-width: 120px;
+        .skill-item:hover {
+          border-color: #6366f1;
         }
 
         .skill-icon {
-          font-size: 1.25rem;
+          font-size: 1.5rem;
           color: #6366f1;
+          display: flex; /* Fix alignment */
         }
 
         .skill-name {
           font-weight: 500;
-          color: #cbd5e1;
-        }
-
-        .skill-bar {
-          flex: 1;
-          height: 8px;
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 4px;
-          overflow: hidden;
-          margin: 0 1rem;
-        }
-
-        .skill-progress {
-          height: 100%;
-          background: linear-gradient(90deg, #6366f1, #8b5cf6);
-          border-radius: 4px;
-        }
-
-        .skill-percentage {
-          font-size: 0.875rem;
-          color: #6366f1;
-          font-weight: 600;
-          min-width: 40px;
+          color: #f8fafc;
         }
 
         .skills-summary {
@@ -257,7 +221,7 @@ const Skills = () => {
           max-width: 800px;
           margin: 0 auto;
           padding: 2rem;
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.6);
           border-radius: 1rem;
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
