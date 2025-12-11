@@ -4,7 +4,7 @@ import ChromaGrid from './ChromaGrid';
 
 // Import local images
 import DatingWebpage from '../images/projects/Dating-Webpage.png';
-import Portfolio from '../images/projects/Portolio.png';
+import Portfolio from '../images/projects/Portfolio.png';
 import AutisMindAI from '../images/projects/AutisMindAI.png';
 
 const Projects = () => {

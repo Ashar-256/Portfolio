@@ -10,26 +10,40 @@ import FaultyTerminal from './components/FaultyTerminal';
 
 import { VscHome, VscAccount, VscCode, VscTools, VscMail } from "react-icons/vsc";
 
+import { useState, useEffect } from 'react';
+// ... imports
+
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const dockItems = [
-    { icon: <VscHome size={18} />, label: 'Home', onClick: () => document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }) },
-    { icon: <VscAccount size={18} />, label: 'About', onClick: () => document.getElementById('about').scrollIntoView({ behavior: 'smooth' }) },
-    { icon: <VscCode size={18} />, label: 'Projects', onClick: () => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }) },
-    { icon: <VscTools size={18} />, label: 'Skills', onClick: () => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }) },
-    { icon: <VscMail size={18} />, label: 'Contact', onClick: () => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }) },
+    // ... dock items
   ];
 
   return (
     <div className="App">
       {/* Global Background */}
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-        <FaultyTerminal
-          scanlineIntensity={0.1}
-          glitchAmount={0.6}
-          flickerAmount={0.3}
-          brightness={2.1}
-          tint="#1e293b"
-        />
+        {isMobile ? (
+          <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }} />
+        ) : (
+          <FaultyTerminal
+            scanlineIntensity={0.1}
+            glitchAmount={0.6}
+            flickerAmount={0.3}
+            brightness={2.1}
+            tint="#1e293b"
+          />
+        )}
       </div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
