@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2025 Mohammad Ashar. All rights reserved.</p>
+            <p>&copy; 2025 Mohammad Ashar. All rights reserved. <span style={{ opacity: 0.5, fontSize: '0.8rem' }}>v1.1</span></p>
             <button onClick={scrollToTop} className="back-to-top">
               Back to Top ↑
             </button>
