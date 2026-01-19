@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaReact, FaJava, FaPython, FaGitAlt, FaGithubAlt, FaBrain } from 'react-icons/fa';
 import { SiJavascript, SiCanva, SiCss3, SiC, SiCplusplus } from 'react-icons/si';
 
-const Skills = () => {
+const Skills = ({ isMobile }) => {
   const skillCategories = [
     {
       title: 'Programming Languages',
@@ -84,7 +84,7 @@ const Skills = () => {
                 variants={categoryVariants}
               >
                 <div className="category-header">
-                  <div className="category-icon">{category.icon}</div>
+                  {!isMobile && <div className="category-icon">{category.icon}</div>}
                   <h3>{category.title}</h3>
                 </div>
 
@@ -96,7 +96,7 @@ const Skills = () => {
                       variants={skillVariants}
                       whileHover={{ scale: 1.05, backgroundColor: "rgba(99, 102, 241, 0.2)" }}
                     >
-                      <div className="skill-icon">{skill.icon}</div>
+                      {!isMobile && <div className="skill-icon">{skill.icon}</div>}
                       <span className="skill-name">{skill.name}</span>
                     </motion.div>
                   ))}

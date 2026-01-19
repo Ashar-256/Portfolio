@@ -5,7 +5,7 @@ import { Children, cloneElement, useEffect, useMemo, useRef, useState } from 're
 
 import './Dock.css';
 
-function DockItem({ children, className = '', onClick, mouseX, spring, distance, magnification, baseItemSize }) {
+function DockItem({ children, className = '', onClick, mouseX, spring, distance, magnification, baseItemSize, isMobile }) {
     const ref = useRef(null);
     const isHovered = useMotionValue(0);
 
@@ -17,7 +17,8 @@ function DockItem({ children, className = '', onClick, mouseX, spring, distance,
         return val - rect.x - baseItemSize / 2;
     });
 
-    const targetSize = useTransform(mouseDistance, [-distance, 0, distance], [baseItemSize, magnification, baseItemSize]);
+    const transformedSize = useTransform(mouseDistance, [-distance, 0, distance], [baseItemSize, magnification, baseItemSize]);
+    const targetSize = isMobile ? baseItemSize : transformedSize;
     const size = useSpring(targetSize, spring);
 
     return (
@@ -84,7 +85,8 @@ export default function Dock({
     distance = 200,
     panelHeight = 68,
     dockHeight = 156,
-    baseItemSize = 50
+    baseItemSize = 50,
+    isMobile = false
 }) {
     const mouseX = useMotionValue(Infinity);
     const isHovered = useMotionValue(0);
@@ -94,7 +96,7 @@ export default function Dock({
         [magnification, dockHeight]
     );
     const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
-    const height = useSpring(heightRow, spring);
+    const height = useSpring(isMobile ? panelHeight : heightRow, spring);
 
     return (
         <motion.div style={{ height, scrollbarWidth: 'none' }} className="dock-outer">
@@ -126,6 +128,7 @@ export default function Dock({
                             distance={distance}
                             magnification={magnification}
                             baseItemSize={baseItemSize}
+                            isMobile={isMobile}
                         >
                             <DockIcon>{item.icon}</DockIcon>
                             <DockLabel>{item.label}</DockLabel>

@@ -5,6 +5,10 @@ A modern, responsive portfolio website built with React, showcasing my projects,
 ## 🚀 Features
 
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Mobile-Optimized Experience**: Tailored UI for mobile devices featuring:
+  - Lightweight static components replacing heavy 3D effects
+  - Simplified navigation and lists for better usability
+  - Performance improvements by disabling complex animations on small screens
 - **Modern UI**: Clean, professional design with smooth animations
 - **Interactive Sections**: Dynamic project showcases and skill displays
 - **Performance Optimized**: Fast loading times and optimized images

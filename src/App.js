@@ -71,10 +71,10 @@ function App() {
       </div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
-        <Hero />
+        <Hero isMobile={isMobile} />
         <About />
-        <Projects />
-        <Skills />
+        <Projects isMobile={isMobile} />
+        <Skills isMobile={isMobile} />
         <Contacts />
         <Footer />
       </div>
@@ -84,6 +84,7 @@ function App() {
         panelHeight={68}
         baseItemSize={50}
         magnification={70}
+        isMobile={isMobile}
       />
     </div>
   );

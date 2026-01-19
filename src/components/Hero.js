@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import TiltedCard from './TiltedCard';
 
-const Hero = () => {
+const Hero = ({ isMobile }) => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -63,20 +63,8 @@ const Hero = () => {
           </h1>
         </motion.div>
 
-        <TiltedCard
-          imageSrc="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjwvc3ZnPg==" // Transparent 1x1 SVG
-          altText="Hero Background"
-          captionText=""
-          containerHeight="auto"
-          containerWidth="auto"
-          imageHeight="auto"
-          imageWidth="auto"
-          rotateAmplitude={12}
-          scaleOnHover={1.02}
-          showMobileWarning={false}
-          showTooltip={false}
-          displayOverlayContent={true}
-          overlayContent={
+        {isMobile ? (
+          <div style={{ padding: '2rem 1rem', width: '100%' }}>
             <motion.div
               className="hero-content"
               variants={containerVariants}
@@ -103,8 +91,51 @@ const Hero = () => {
                 </div>
               </motion.div>
             </motion.div>
-          }
-        />
+          </div>
+        ) : (
+          <TiltedCard
+            imageSrc="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjwvc3ZnPg==" // Transparent 1x1 SVG
+            altText="Hero Background"
+            captionText=""
+            containerHeight="auto"
+            containerWidth="auto"
+            imageHeight="auto"
+            imageWidth="auto"
+            rotateAmplitude={12}
+            scaleOnHover={1.02}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={true}
+            overlayContent={
+              <motion.div
+                className="hero-content"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.div variants={itemVariants} className="hero-text-inner">
+                  <h2 className="hero-subtitle">
+                    I'm a <span className="typing-text">{text}</span>
+                    <span className="cursor">|</span>
+                  </h2>
+                  <p className="hero-description">
+                    I create beautiful, responsive web applications.
+                    Passionate about clean code, user experience, and bringing ideas to life.
+                    Eager to collaborate and learn from others in a professional environment.
+                  </p>
+                  <div className="hero-buttons">
+                    <a href="#contact" className="btn btn-primary">
+                      Get In Touch
+                    </a>
+                    <a href="#projects" className="btn btn-secondary">
+                      View My Work
+                    </a>
+                  </div>
+                </motion.div>
+              </motion.div>
+            }
+          />
+        )}
       </div>
 
       <style jsx>{`
