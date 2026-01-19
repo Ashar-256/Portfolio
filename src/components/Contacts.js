@@ -79,12 +79,12 @@ const Contacts = () => {
     },
     {
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/mohammad-ashar-262an',
+      url: 'https://www.linkedin.com/in/ashar-262an/',
       name: 'LinkedIn',
     },
     {
       icon: <FaTwitter />,
-      url: 'https://X.com/Ashar_256',
+      url: 'https://x.com/AshenOne262',
       name: 'Twitter',
     },
   ];

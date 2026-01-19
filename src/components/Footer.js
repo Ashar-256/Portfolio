@@ -11,12 +11,12 @@ const Footer = () => {
     },
     {
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/mohammad-ashar-262an',
+      url: 'https://www.linkedin.com/in/ashar-262an/',
       name: 'LinkedIn',
     },
     {
       icon: <FaTwitter />,
-      url: 'https://X.com/Ashar_256',
+      url: 'https://x.com/AshenOne262',
       name: 'Twitter',
     },
     {
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2025 Mohammad Ashar. All rights reserved. <span style={{ opacity: 0.5, fontSize: '0.8rem' }}>v1.2</span></p>
+            <p>&copy; 2025 Mohammad Ashar. All rights reserved. <span style={{ opacity: 0.5, fontSize: '0.8rem' }}>v1.3</span></p>
             <button onClick={scrollToTop} className="back-to-top">
               Back to Top ↑
             </button>
