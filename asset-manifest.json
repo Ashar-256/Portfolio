@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.e8d3c09c.css",
-    "main.js": "/Portfolio/static/js/main.c74ac963.js",
+    "main.js": "/Portfolio/static/js/main.fe79e278.js",
     "static/media/AutisMindAI.png": "/Portfolio/static/media/AutisMindAI.d73a82dac84053a53980.png",
     "static/media/Dating-Webpage.png": "/Portfolio/static/media/Dating-Webpage.4faaec477673067e60db.png",
     "static/media/Portfolio.png": "/Portfolio/static/media/Portfolio.51e80fd00afb14e035aa.png",
     "index.html": "/Portfolio/index.html",
     "main.e8d3c09c.css.map": "/Portfolio/static/css/main.e8d3c09c.css.map",
-    "main.c74ac963.js.map": "/Portfolio/static/js/main.c74ac963.js.map"
+    "main.fe79e278.js.map": "/Portfolio/static/js/main.fe79e278.js.map"
   },
   "entrypoints": [
     "static/css/main.e8d3c09c.css",
-    "static/js/main.c74ac963.js"
+    "static/js/main.fe79e278.js"
   ]
 }
