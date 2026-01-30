@@ -6,6 +6,7 @@ import ChromaGrid from './ChromaGrid';
 import DatingWebpage from '../images/projects/Dating-Webpage.png';
 import Portfolio from '../images/projects/Portfolio.png';
 import AutisMindAI from '../images/projects/AutisMindAI.png';
+import ChaiCulture from '../images/projects/ChaiCulture.png';
 
 const Projects = ({ isMobile }) => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -13,17 +14,6 @@ const Projects = ({ isMobile }) => {
   const projects = [
     {
       id: 1,
-      title: 'Dating Webpage',
-      description: 'Concept landing page inspired by modern dating platforms.',
-      image: DatingWebpage,
-      technologies: ['CSS', 'HTML'],
-      url: 'https://ashar-256.github.io/Dating-Webpage/',
-      category: 'frontend',
-      borderColor: '#f472b6',
-      gradient: 'linear-gradient(145deg, #f472b6, #000)',
-    },
-    {
-      id: 2,
       title: 'Portfolio Website',
       description: 'The very site you are on right now ;)',
       image: Portfolio,
@@ -34,7 +24,7 @@ const Projects = ({ isMobile }) => {
       gradient: 'linear-gradient(145deg, #6366f1, #000)',
     },
     {
-      id: 3,
+      id: 2,
       title: 'AutisMind AI',
       description: 'AI-powered early autism risk assessment tool using computer vision and audio analysis.',
       image: AutisMindAI, // Using placeholder as requested
@@ -43,7 +33,18 @@ const Projects = ({ isMobile }) => {
       category: 'fullstack',
       borderColor: '#0ea5e9',
       gradient: 'linear-gradient(145deg, #0ea5e9, #000)',
-    }
+    },
+    {
+      id: 3,
+      title: 'Chai Culture',
+      description: 'A "Coming Soon" landing page made for an assignment.',
+      image: ChaiCulture,
+      technologies: ['React', 'Vite', 'Vanilla CSS'],
+      url: 'https://ashar-256.github.io/ChaiCulture/',
+      category: 'frontend',
+      borderColor: '#A65210',
+      gradient: 'linear-gradient(145deg, #A65210, #000)',
+    },
   ];
 
   const filters = [
