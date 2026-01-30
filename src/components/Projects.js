@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import ChromaGrid from './ChromaGrid';
 
 // Import local images
-import DatingWebpage from '../images/projects/Dating-Webpage.png';
 import Portfolio from '../images/projects/Portfolio.png';
 import AutisMindAI from '../images/projects/AutisMindAI.png';
 import ChaiCulture from '../images/projects/ChaiCulture.png';
