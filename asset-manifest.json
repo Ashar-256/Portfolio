@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.4786d023.css",
-    "main.js": "/Portfolio/static/js/main.311a699b.js",
+    "main.js": "/Portfolio/static/js/main.46152d1c.js",
+    "static/media/ChaiCulture.png": "/Portfolio/static/media/ChaiCulture.d5becc9c7cb55e08316f.png",
     "static/media/AutisMindAI.png": "/Portfolio/static/media/AutisMindAI.d73a82dac84053a53980.png",
-    "static/media/Dating-Webpage.png": "/Portfolio/static/media/Dating-Webpage.4faaec477673067e60db.png",
     "static/media/Portfolio.png": "/Portfolio/static/media/Portfolio.51e80fd00afb14e035aa.png",
     "index.html": "/Portfolio/index.html",
     "main.4786d023.css.map": "/Portfolio/static/css/main.4786d023.css.map",
-    "main.311a699b.js.map": "/Portfolio/static/js/main.311a699b.js.map"
+    "main.46152d1c.js.map": "/Portfolio/static/js/main.46152d1c.js.map"
   },
   "entrypoints": [
     "static/css/main.4786d023.css",
-    "static/js/main.311a699b.js"
+    "static/js/main.46152d1c.js"
   ]
 }
